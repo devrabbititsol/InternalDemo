@@ -2,18 +2,18 @@ package api.internaldemo.apimoduledemo.apipageclasses;
 
 public class GoogleAPIGet2Dataset{
 
-public static final int datasetLength = 1; 
+public static final int datasetLength = 2; 
 
 public static String projectName = "internaldemo";
 
  public static String primaryInfo  = "{\"module_description\":\"desc\","
  + "\"mobile_platform\":null,"
  + "\"report_upload_url\":\"https://smartqe.io:443/UploadReportFile\","
- + "\"repository_commit_message\":\"Test\","
+ + "\"repository_commit_message\":\"DockerTestAPI\","
  + "\"browser_type\":null,"
  + "\"project_url\":\"https://maps.googleapis.com/\","
  + "\"jenkins_username\":\"admin\","
- + "\"testcase_id\":252,"
+ + "\"testcase_id\":251,"
  + "\"project_name\":\"InternalDemo\","
  + "\"testset_name\":null,"
  + "\"is_web\":false,"
@@ -23,8 +23,8 @@ public static String projectName = "internaldemo";
  + "\"sub_module_id\":0,"
  + "\"repository_url\":\"GYTtsVj2Xj1AafZw+bkZeoWfrQ4utmB2CMl2vWb5EecmWiXz1U2k39rr3nWcb2kMA1xC1klvgxuYRi2lz2aXs1sVjQxgXsfRRmsxGych6N+DpvesVb5K+qBRa7bUzzjP\","
  + "\"sub_module_description\":null,"
- + "\"testcase_name\":\"TC2\","
- + "\"executed_timestamp\":1560935127096,"
+ + "\"testcase_name\":\"TC1\","
+ + "\"executed_timestamp\":1560935263588,"
  + "\"is_execute\":false,"
  + "\"file_name\":null,"
  + "\"aes_secret_key\":\"_SmartQE_SmartQE\","
@@ -38,13 +38,13 @@ public static String projectName = "internaldemo";
  + "\"bundle_id\":null,"
  + "\"sub_module_name\":null,"
  + "\"device_os_version\":null,"
- + "\"execution_environment\":\"jenkins\","
+ + "\"execution_environment\":\"docker\","
  + "\"module_name\":\"APIModuleDemo\"}";
 
 
 			/*--------Default Dataset-----------*/
 
-public static final String datasetHeader1 = "TC2-Default";
+public static final String datasetHeader1 = "TC1-Default";
 
 public static final String datasetResources1 = "maps/api/place/nearbysearch/json";
 public static final int requestType1 = 1;
@@ -52,33 +52,73 @@ public static final int bodyType1 = -1;
 
  public static String urlParams1  = "[{\"param_value\":\"-33.8670522,"
  + "151.1957362\","
- + "\"url_param_id\":848,"
+ + "\"url_param_id\":808,"
  + "\"param_key\":\"location\","
- + "\"dataset_id\":1250,"
+ + "\"dataset_id\":1242,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"restaurant\","
- + "\"url_param_id\":849,"
+ + "\"url_param_id\":809,"
  + "\"param_key\":\"type\","
- + "\"dataset_id\":1250,"
+ + "\"dataset_id\":1242,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"cruise\","
- + "\"url_param_id\":850,"
+ + "\"url_param_id\":810,"
  + "\"param_key\":\"keyword\","
- + "\"dataset_id\":1250,"
+ + "\"dataset_id\":1242,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"AIzaSyBhALFz5ldUASRKUXEhv1iXjXKE8OlULyk\","
- + "\"url_param_id\":851,"
+ + "\"url_param_id\":811,"
  + "\"param_key\":\"key\","
- + "\"dataset_id\":1250,"
+ + "\"dataset_id\":1242,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"2500\","
- + "\"url_param_id\":852,"
+ + "\"url_param_id\":812,"
  + "\"param_key\":\"radius\","
- + "\"dataset_id\":1250,"
+ + "\"dataset_id\":1242,"
  + "\"param_desc\":\"\"}]";
 
  public static String headers1  = "[]";
 
  public static String body1  = "{}";
+
+			/*--------DS2 Dataset-----------*/
+
+public static final String datasetHeader2 = "TC1-DS2";
+
+public static final String datasetResources2 = "maps/api/place/nearbysearch/json";
+public static final int requestType2 = 1;
+public static final int bodyType2 = -1;
+
+ public static String urlParams2  = "[{\"param_value\":\"-33.8670522,"
+ + "151.1957362\","
+ + "\"url_param_id\":818,"
+ + "\"param_key\":\"location\","
+ + "\"dataset_id\":1244,"
+ + "\"param_desc\":\"\"},"
+ + "{\"param_value\":\"restaurant\","
+ + "\"url_param_id\":819,"
+ + "\"param_key\":\"type\","
+ + "\"dataset_id\":1244,"
+ + "\"param_desc\":\"\"},"
+ + "{\"param_value\":\"cruise\","
+ + "\"url_param_id\":820,"
+ + "\"param_key\":\"keyword\","
+ + "\"dataset_id\":1244,"
+ + "\"param_desc\":\"\"},"
+ + "{\"param_value\":\"AIzaSyBhALFz5ldUASRKUXEhv1iXjXKE8OlULyk\","
+ + "\"url_param_id\":821,"
+ + "\"param_key\":\"key\","
+ + "\"dataset_id\":1244,"
+ + "\"param_desc\":\"\"},"
+ + "{\"param_value\":\"2500\","
+ + "\"url_param_id\":822,"
+ + "\"param_key\":\"radius\","
+ + "\"dataset_id\":1244,"
+ + "\"param_desc\":\"\"}]";
+
+ public static String headers2  = "[]";
+
+ public static String body2  = "{}";
+
 
 }
