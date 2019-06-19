@@ -24,7 +24,7 @@ public static String projectName = "internaldemo";
  + "\"repository_url\":\"GYTtsVj2Xj1AafZw+bkZeoWfrQ4utmB2CMl2vWb5EecmWiXz1U2k39rr3nWcb2kMA1xC1klvgxuYRi2lz2aXs1sVjQxgXsfRRmsxGych6N+DpvesVb5K+qBRa7bUzzjP\","
  + "\"sub_module_description\":null,"
  + "\"testcase_name\":\"TC_GoogleAPI\","
- + "\"executed_timestamp\":1560944579311,"
+ + "\"executed_timestamp\":1560944662523,"
  + "\"is_execute\":false,"
  + "\"file_name\":null,"
  + "\"aes_secret_key\":\"_SmartQE_SmartQE\","
@@ -38,7 +38,7 @@ public static String projectName = "internaldemo";
  + "\"bundle_id\":null,"
  + "\"sub_module_name\":null,"
  + "\"device_os_version\":null,"
- + "\"execution_environment\":\"jenkins\","
+ + "\"execution_environment\":\"docker\","
  + "\"module_name\":\"APIDemo\"}";
 
 
