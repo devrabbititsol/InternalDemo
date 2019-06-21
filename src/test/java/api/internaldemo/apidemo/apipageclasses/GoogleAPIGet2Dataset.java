@@ -9,11 +9,11 @@ public static String projectName = "internaldemo";
  public static String primaryInfo  = "{\"module_description\":\"desc\","
  + "\"mobile_platform\":null,"
  + "\"report_upload_url\":\"https://smartqe.io:443/UploadReportFile\","
- + "\"repository_commit_message\":\"bbv\","
+ + "\"repository_commit_message\":\"Test\","
  + "\"browser_type\":null,"
  + "\"project_url\":\"https://maps.googleapis.com/\","
  + "\"jenkins_username\":\"admin\","
- + "\"testcase_id\":253,"
+ + "\"testcase_id\":254,"
  + "\"project_name\":\"InternalDemo\","
  + "\"testset_name\":null,"
  + "\"is_web\":false,"
@@ -23,8 +23,8 @@ public static String projectName = "internaldemo";
  + "\"sub_module_id\":0,"
  + "\"repository_url\":\"GYTtsVj2Xj1AafZw+bkZeoWfrQ4utmB2CMl2vWb5EecmWiXz1U2k39rr3nWcb2kMA1xC1klvgxuYRi2lz2aXs1sVjQxgXsfRRmsxGych6N+DpvesVb5K+qBRa7bUzzjP\","
  + "\"sub_module_description\":null,"
- + "\"testcase_name\":\"TC_GoogleAPI\","
- + "\"executed_timestamp\":1560944662523,"
+ + "\"testcase_name\":\"TC_Demo\","
+ + "\"executed_timestamp\":1561107881257,"
  + "\"is_execute\":false,"
  + "\"file_name\":null,"
  + "\"aes_secret_key\":\"_SmartQE_SmartQE\","
@@ -38,13 +38,13 @@ public static String projectName = "internaldemo";
  + "\"bundle_id\":null,"
  + "\"sub_module_name\":null,"
  + "\"device_os_version\":null,"
- + "\"execution_environment\":\"docker\","
+ + "\"execution_environment\":\"jenkins\","
  + "\"module_name\":\"APIDemo\"}";
 
 
 			/*--------Default Dataset-----------*/
 
-public static final String datasetHeader1 = "TC_GoogleAPI-Default";
+public static final String datasetHeader1 = "TC_Demo-Default";
 
 public static final String datasetResources1 = "maps/api/place/nearbysearch/json";
 public static final int requestType1 = 1;
@@ -52,29 +52,29 @@ public static final int bodyType1 = -1;
 
  public static String urlParams1  = "[{\"param_value\":\"-33.8670522,"
  + "151.1957362\","
- + "\"url_param_id\":983,"
+ + "\"url_param_id\":988,"
  + "\"param_key\":\"location\","
- + "\"dataset_id\":1277,"
+ + "\"dataset_id\":1278,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"restaurant\","
- + "\"url_param_id\":984,"
+ + "\"url_param_id\":989,"
  + "\"param_key\":\"type\","
- + "\"dataset_id\":1277,"
+ + "\"dataset_id\":1278,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"cruise\","
- + "\"url_param_id\":985,"
+ + "\"url_param_id\":990,"
  + "\"param_key\":\"keyword\","
- + "\"dataset_id\":1277,"
+ + "\"dataset_id\":1278,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"AIzaSyBhALFz5ldUASRKUXEhv1iXjXKE8OlULyk\","
- + "\"url_param_id\":986,"
+ + "\"url_param_id\":991,"
  + "\"param_key\":\"key\","
- + "\"dataset_id\":1277,"
+ + "\"dataset_id\":1278,"
  + "\"param_desc\":\"\"},"
  + "{\"param_value\":\"2500\","
- + "\"url_param_id\":987,"
+ + "\"url_param_id\":992,"
  + "\"param_key\":\"radius\","
- + "\"dataset_id\":1277,"
+ + "\"dataset_id\":1278,"
  + "\"param_desc\":\"\"}]";
 
  public static String headers1  = "[]";
