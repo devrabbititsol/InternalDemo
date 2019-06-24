@@ -1,0 +1,62 @@
+FROM ubuntu
+MAINTAINER DevRabbit
+ 
+RUN apt-get clean
+RUN apt-get -y update
+RUN apt-get install -qq -y curl
+RUN apt-get install -y unzip
+RUN apt-get install -y git
+RUN apt-get install -y wget
+RUN apt-get install --reinstall -y software-properties-common
+ 
+
+RUN \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  add-apt-repository -y ppa:webupd8team/java && \
+  apt-get update && \
+  apt-get install -y oracle-java8-installer && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/oracle-jdk8-installer
+
+
+# Define working directory.
+WORKDIR /data
+
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+# Define default command.
+CMD ["bash"]
+
+
+ENV MAVEN_VERSION 3.5.4
+
+RUN mkdir -p /usr/share/maven \
+  && curl -fsSL http://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
+    | tar -xzC /usr/share/maven --strip-components=1 \
+  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+
+ENV MAVEN_HOME /usr/share/maven
+
+VOLUME /root/.m2
+
+CMD ["mvn"] 
+
+
+#install Google-chrome and Google driver
+RUN apt-get -y update
+RUN apt-get install -y unzip xvfb libxi6 libgconf-2-4 
+RUN apt-get install -y gnupg2
+RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+RUN echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+RUN apt-get -y update
+RUN apt-get -y install google-chrome-stable
+
+RUN wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+RUN unzip chromedriver_linux64.zip
+RUN mv -f chromedriver /usr/local/share/chromedriver
+RUN ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+RUN ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+ARG GIT_VERSION=1560944668633
+RUN cd $HOME && GIT_VERSION=${GIT_VERSION} git clone https://55f281cb2dcf1dffb097e20b9e7930a6744e5dc7@github.com/devrabbititsol/InternalDemo.git
+RUN cd $HOME/InternalDemo && GIT_VERSION=${GIT_VERSION} mvn clean test -DsuiteXmlFile=testng.xml
